@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	<!-- 주문서 --> <!--느슨한 의존 관계를 설정해 줬다. -->
+
+  <!--  <context:annotation-config />  --><!-- @ autowired를 사용하려면 자동 dataType -->
+
+   <context:component-scan base-package="kosta"/> <!-- 팩키지 안에 있는 객체를 만들어준다. 4개의 어노테이션을 가진것만 생성해준다. -->
+   
+	 <!-- <bean id="oracleDao" class="kosta.OracleDao">
+	<qualifier value="oracle"/> dao중 이름을 명시해줘 어느것을 실행 할지 정해준다.
+	</bean> -->
+	
+	<!-- <bean id="MySqlDao" class="kosta.MySqlDao" /> -->
+
+	<bean id="Service" class="kosta.WriteService">
+
+		<!-- <constructor-arg ref="MySqlDao" /> --> <!-- 생성자 이용방식 --><!-- service oracle dao 를 생성자로 넘겨준다 -->
+		<!-- ref="MySqlDao" == <bean id ="MySqlDao"> -->
+
+		<!-- <property name="dao" ref="MySqlDao"></property> --> <!-- set 메소드 이용방식 -->
+	</bean>
+
+
+</beans>

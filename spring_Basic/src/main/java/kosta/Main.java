@@ -15,9 +15,11 @@ public class Main {
 		/*Resource resouce = new ClassPathResource("applicationContext.xml");
 
 		BeanFactory factory = new GenericXmlApplicationContext(resouce);*/ //명시적 방법 생성자 property 를 사용할때
+		
 		/*ApplicationContext factory =
 				new GenericXmlApplicationContext("applicationContext.xml"); //inject autowired 4개의 어노테이션을 사용할때
 		*/
+		
 	/*	ApplicationContext factory = new AnnotationConfigApplicationContext(Factory.class);*/ //자바 클래스로 xml대신 사용할때
 		
 		// spring container 안에 dao , service 객체가 안에 있다.

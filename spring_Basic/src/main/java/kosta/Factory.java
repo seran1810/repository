@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 
-@Configuration //xml 설정 역할을 하는 java 클래스 
+@Configuration //컨테이너 xml 설정 역할을 하는 java 클래스 
 public class Factory {
 	
 	@Bean  //객체 생성
